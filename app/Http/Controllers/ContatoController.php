@@ -16,7 +16,11 @@ class ContatoController extends Controller
 
     public function index()
     {
-        
+        $contatos = $this->repository->orderBy('id', 'DESC')->paginate(10);
+
+        return view ('agenda.pages.index', [
+            'contatos' => $contatos,
+        ]);
     }
 
     public function show($id)
