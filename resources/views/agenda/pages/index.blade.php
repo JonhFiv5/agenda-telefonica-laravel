@@ -3,6 +3,7 @@
 @section('title', 'Contatos')
 
 @section('content')
+    <a href="{{ route('contatos.create') }}">Novo contato</a>
     <h1>Lista de contatos</h1>
     <table class="table table-striped table-hover">
         <thead>

@@ -35,9 +35,10 @@ class ContatoController extends Controller
         ]);
     }
 
-    public function create()
+    public function criar()
     {
-
+        dd('pqp');
+        return view('agenda.pages.create');
     }
 
     public function store(Request $request)
