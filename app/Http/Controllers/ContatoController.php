@@ -50,12 +50,26 @@ class ContatoController extends Controller
 
     public function edit($id)
     {
+        $contato = $this->repository->find($id);
+        if (!$contato) {
+            abort(404);
+        }
 
+        return view('agenda.pages.edit', [
+            'contato' => $contato,
+        ]);
     }
 
     public function update(Request $request, $id)
     {
+        $produto = $this->repository->find($id);
+        if (!$produto) {
+            abort(404);
+        }
+        $dados = $request->all();
+        $produto->update($dados);
 
+        return redirect()->route('contatos.index');
     }
 
     public function delete($id)

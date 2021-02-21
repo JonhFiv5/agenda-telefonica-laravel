@@ -12,4 +12,5 @@
         <dt>Telefone</dt>
         <dd>{{ $contato->telefone }}</dd>
     </dl>
+    <a class="btn btn-info" href="{{ route('contatos.edit', $contato->id) }}">Editar</a>
 @endsection

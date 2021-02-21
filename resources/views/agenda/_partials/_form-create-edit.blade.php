@@ -1,15 +1,15 @@
 @csrf
 <div class="form-group">
         <label for="Nome">Nome</label>
-        <input type="text" name="nome" value="{{ @old('nome') }}" class="form-control">
+        <input type="text" name="nome" value="{{ $contato->nome ?? @old('nome') }}" class="form-control">
 </div>
 <div class="form-group">
     <label for="">Sobrenome</label>
-    <input type="text" name="sobrenome" value="{{ @old('sobrenome') }}" class="form-control">
+    <input type="text" name="sobrenome" value="{{ $contato->sobrenome ?? @old('sobrenome') }}" class="form-control">
 </div>
 <div class="form-group">
     <label for="">Telefone</label>
-    <input type="text" name="telefone" value="{{ @old('telefone') }}" class="form-control">
+    <input type="text" name="telefone" value="{{ $contato->telefone ?? @old('telefone') }}" class="form-control">
 </div>
 <div class="form-group">
     <label for="foto">Foto</label>
