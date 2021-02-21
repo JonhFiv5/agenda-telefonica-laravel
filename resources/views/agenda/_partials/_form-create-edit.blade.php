@@ -5,11 +5,11 @@
 </div>
 <div class="form-group">
     <label for="">Sobrenome</label>
-    <input type="text" name="nome" value="{{ @old('sobrenome') }}" class="form-control">
+    <input type="text" name="sobrenome" value="{{ @old('sobrenome') }}" class="form-control">
 </div>
 <div class="form-group">
     <label for="">Telefone</label>
-    <input type="text" name="nome" value="{{ @old('telefone') }}" class="form-control">
+    <input type="text" name="telefone" value="{{ @old('telefone') }}" class="form-control">
 </div>
 <div class="form-group">
     <label for="foto">Foto</label>

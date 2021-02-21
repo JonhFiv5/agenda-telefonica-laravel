@@ -35,15 +35,14 @@ class ContatoController extends Controller
         ]);
     }
 
-    public function criar()
+    public function create()
     {
-        dd('pqp');
         return view('agenda.pages.create');
     }
 
     public function store(Request $request)
     {
-
+        dd($request->all());
     }
 
     public function edit($id)
