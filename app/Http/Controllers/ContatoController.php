@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreUpdateContatoRequest;
 use App\Models\Contato;
 use Illuminate\Http\Request;
 
@@ -40,7 +41,7 @@ class ContatoController extends Controller
         return view('agenda.pages.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreUpdateContatoRequest $request)
     {
         $dados = $request->only('nome', 'sobrenome', 'telefone');
         $this->repository->create($dados);
@@ -60,7 +61,7 @@ class ContatoController extends Controller
         ]);
     }
 
-    public function update(Request $request, $id)
+    public function update(StoreUpdateContatoRequest $request, $id)
     {
         $contato = $this->repository->find($id);
         if (!$contato) {
