@@ -25,7 +25,14 @@ class ContatoController extends Controller
 
     public function show($id)
     {
+        $contato = $this->repository->find($id);
+        if (!$contato) {
+            abort(404);
+        }
 
+        return view('agenda.pages.show', [
+            'contato' => $contato,
+        ]);
     }
 
     public function create()

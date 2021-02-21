@@ -20,7 +20,7 @@
                     <td>{{ $contato->nome }}</td>
                     <td>{{ $contato->sobrenome }}</td>
                     <td>{{ $contato->telefone }}</td>
-                    <td><a href="http://">Detalhes</a></td>
+                    <td><a href="{{ route('contatos.show', $contato->id) }}">Detalhes</a></td>
                 </tr>
             @endforeach
         </tbody>
