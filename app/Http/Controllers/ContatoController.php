@@ -42,7 +42,10 @@ class ContatoController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        $dados = $request->only('nome', 'sobrenome', 'telefone');
+        $this->repository->create($dados);
+
+        return redirect()->route('contatos.index');
     }
 
     public function edit($id)
