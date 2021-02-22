@@ -3,8 +3,8 @@
 @section('title', 'Contatos')
 
 @section('content')
-    <a href="{{ route('contatos.create') }}">Novo contato</a>
-    <h1>Lista de contatos</h1>
+<h1>Lista de contatos</h1>
+    <a class="btn btn-success mt-3 mb-3" href="{{ route('contatos.create') }}">Novo contato</a>
     <table class="table table-striped table-hover">
         <thead>
             <tr>
