@@ -3,8 +3,13 @@
 @section('title', 'Detalhes do contato')
 
 @section('content')
+    <h1>Detalhes do contato</h1>
+    @if ($contato->foto)
+        <img src="{{ url("storage/{$contato->foto}") }}" alt="{{ $contato->nome }}" height="150px">
+    @else
+        <img src="{{ url("storage/contatos/default/profile.jpg") }}" alt="Imagem padrão" height="150px">
+    @endif
     <dl>
-        <h1>Detalhes do contato</h1>
         <dt>Nome</dt>
         <dd>{{ $contato->nome }}</dd>
         <dt>Sobrenome</dt>
